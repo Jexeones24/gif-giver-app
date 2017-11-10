@@ -4,7 +4,12 @@ export const Image = ({url}) => {
   return (
     <div className='img'>
       <img src={url} alt='img' />
-      <div className='overlay'>SHOW ON HOVER</div>
+      <div className='overlay'>
+        <span>
+          <div className='heart'></div>
+          <div className='add'>+</div>
+        </span>
+      </div>
     </div>
   )
 }
