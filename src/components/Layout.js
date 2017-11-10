@@ -4,7 +4,6 @@ import Gallery from './Gallery'
 
 export default class Layout extends Component {
   render () {
-    console.log('layout props:', this.props)
     return (
       <div className='layout'>
         LAYOUT
