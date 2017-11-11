@@ -25,8 +25,8 @@ class App extends Component {
     return (
       <div className='App'>
         <header>
-          <h1>GIF GIVER</h1>
-          <p>the gif that keeps on giving...</p>
+          <span className='title'>GIF GIVER</span>
+          <span>the gif that keeps on giving...</span>
         </header>
         <Layout
           filterGifs={this.filterGifs}
