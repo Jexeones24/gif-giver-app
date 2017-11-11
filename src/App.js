@@ -22,11 +22,13 @@ class App extends Component {
     return replaced
   }
   render () {
+    const links = ['Profile', 'Somewhere', 'There', 'Here']
     return (
       <div className='App'>
         <Banner
           title='GIF GIVER'
           subtitle='the gif that keeps on giving...'
+          links={links}
         />
         <Layout
           filterGifs={this.filterGifs}
@@ -37,11 +39,14 @@ class App extends Component {
   }
 }
 
-const Banner = ({title, subtitle}) => {
+const Banner = ({title, subtitle, links}) => {
   return (
     <header>
       <span className='title'>{title}</span>
       <span className='subtitle'>{subtitle}</span>
+      <span className='nav-links'>
+        {links.map((link, idx) => <a href='#' key={idx}>{link}</a>)}
+      </span>
     </header>
   )
 }

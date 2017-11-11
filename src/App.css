@@ -11,16 +11,34 @@ body {
 }
 
 .title {
-  padding: 0;
   font-size: 100px;
+  float: left;
+}
+
+.subtitle {
+  float: left;
+  padding-top: 65px;
+  margin-left: 4px;
+}
+
+.nav-links {
+  float: right;
+  padding-top: 65px;
+}
+
+a {
+  margin-right: 5px;
 }
 
 header {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
+  color: white;
+  background-color: black;
+  clear: left;
+  text-align: center;
+}
+
+span .nav-links {
+  margin-right: 10px;
 }
 
 .gallery {
@@ -35,7 +53,7 @@ header {
   column-gap: 1.5em;
   -moz-column-fill: auto;
   column-fill: auto;
-  box-sizing : border-box;
+
   @media (min-width: 40em) {
   margin: .5em 0 .5em -.5em;
   }
@@ -49,7 +67,6 @@ header {
   width: 100%;
   margin: 0 auto;
   background-color: black;
-  padding-bottom: 15px;
 }
 
 input {
@@ -75,6 +92,7 @@ input {
   justify-content: center;
   clear: both;
   overflow: hidden;
+  box-sizing : border-box;
 
   @media (min-width: 40em) {
     flex: 0;
