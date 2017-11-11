@@ -4,8 +4,9 @@ import Gallery from './Gallery'
 
 export default class Main extends Component {
   render () {
+  console.log('main props:', this.props)
     return (
-      <div className='layout'>
+      <div className='main'>
         <SearchBar filterGifs={this.props.filterGifs} />
         <Gallery images={this.props.images} />
       </div>

@@ -22,9 +22,8 @@ body {
 }
 
 .nav-links {
-  float: left;
-  padding-top: 52px;
-  padding-left: 155px;
+  float: right;
+  padding-top: 55px;
 }
 
 a {
@@ -66,7 +65,7 @@ header {
   }
 }
 
-.layout {
+.main {
   width: 100%;
 }
 

@@ -31,7 +31,7 @@ class App extends Component {
     )
   }
   render () {
-    const links = ['Somewhere', 'There', 'Here']
+    const links = ['Home', 'Login', 'Register', 'Profile']
     return (
       <Router>
         <div className='App'>
@@ -50,13 +50,13 @@ class App extends Component {
   }
 }
 
-const NavBar = ({title, subtitle, links}) => {
+const NavBar = (props) => {
   return (
     <header>
-      <span className='title'>{title}</span>
-      <span className='subtitle'>{subtitle}</span>
+      <span className='title'>{props.title}</span>
+      <span className='subtitle'>{props.subtitle}</span>
       <span className='nav-links'>
-        {links.map((link, idx) => <Link to='#' key={idx}>{link}</Link>)}
+        {props.links.map((link, idx) => <Link to='#' key={idx}>{link}</Link>)}
       </span>
     </header>
   )
@@ -76,13 +76,10 @@ const Register = () => {
     </div>
   )
 }
-// also want search bar - same as Main
-  // how to render same component with diff search params?
+// is this right way to render same component with diff search params?
 const Profile = () => {
   return (
-    <div className='profile'>
-      PROFILE
-    </div>
+    <Main />
   )
 }
 
