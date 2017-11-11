@@ -70,6 +70,13 @@ header {
   width: 100%;
 }
 
+.login, .register, .profile {
+  width: 100%;
+  background-color: black;
+  color: white;
+  overflow: auto;
+}
+
 .search-bar {
   width: 100%;
   margin: 0 auto;
