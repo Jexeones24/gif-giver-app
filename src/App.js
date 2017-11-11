@@ -22,7 +22,7 @@ class App extends Component {
     return replaced
   }
   render () {
-    const links = ['Profile', 'Somewhere', 'There', 'Here']
+    const links = ['Somewhere', 'There', 'Here']
     return (
       <div className='App'>
         <Banner

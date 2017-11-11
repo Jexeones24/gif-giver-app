@@ -22,23 +22,30 @@ body {
 }
 
 .nav-links {
-  float: right;
-  padding-top: 65px;
+  float: left;
+  padding-top: 52px;
+  padding-left: 155px;
 }
 
 a {
-  margin-right: 5px;
+  margin-left: 8px;
+  color: #FF1493;
+  text-decoration: none;
+  border: 0.5px solid #FF1493;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+a:hover {
+  color: white;
 }
 
 header {
   color: white;
   background-color: black;
-  clear: left;
   text-align: center;
-}
-
-span .nav-links {
-  margin-right: 10px;
+  box-sizing: border-box;
 }
 
 .gallery {
