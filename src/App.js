@@ -11,8 +11,8 @@ class App extends Component {
     let queryStr = this.makeQueryStr(input)
     fetchGifs(queryStr, limit)
     .then(gifs => {
+      console.log('gifs:', gifs)
       let images = gifs.data.map(gif => gif.images.downsized.url)
-      console.log(images)
       this.setState({images})
     })
   }
@@ -24,10 +24,10 @@ class App extends Component {
   render () {
     return (
       <div className='App'>
-        <header>
-          <span className='title'>GIF GIVER</span>
-          <span>the gif that keeps on giving...</span>
-        </header>
+        <Banner
+          title='GIF GIVER'
+          subtitle='the gif that keeps on giving...'
+        />
         <Layout
           filterGifs={this.filterGifs}
           images={this.state.images}
@@ -35,6 +35,15 @@ class App extends Component {
       </div>
     )
   }
+}
+
+const Banner = ({title, subtitle}) => {
+  return (
+    <header>
+      <span className='title'>{title}</span>
+      <span className='subtitle'>{subtitle}</span>
+    </header>
+  )
 }
 
 export default App

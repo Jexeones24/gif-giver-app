@@ -35,10 +35,14 @@ header {
   column-gap: 1.5em;
   -moz-column-fill: auto;
   column-fill: auto;
-
+  box-sizing : border-box;
   @media (min-width: 40em) {
   margin: .5em 0 .5em -.5em;
   }
+}
+
+.layout {
+  width: 100%;
 }
 
 .search-bar {
@@ -49,12 +53,12 @@ header {
 }
 
 input {
-  padding: 10px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 15px;
+  margin-bottom: 30px;
   font-size: 16px;
   border-radius: 3px;
-  width: 400px;
+  width: 100%;
+  box-sizing : border-box;
 }
 
 .img {
