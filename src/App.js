@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { fetchGifs } from './lib/gifService'
 import Main from './components/Main'
+import Form from './components/Form'
 import './App.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
@@ -62,18 +63,30 @@ const NavBar = (props) => {
   )
 }
 
-const Login = () => {
+// need to pass: inputs (numberofFields), className, type, name, placeholder, onChange, onSubmit
+const Login = (props) => {
+  const inputs = ['username', 'password', 'password confirmation']
   return (
-    <div className='login'>
-      LOGIN
-    </div>
+    <Form
+      label='LOGIN'
+      inputs={inputs}
+      className='login'
+      type='text'
+      name='login'
+    />
+
   )
 }
 const Register = () => {
+  const inputs = ['first name', 'last name', 'username', 'email', 'email confirmation', 'password', 'password confirmation']
   return (
-    <div className='register'>
-      REGISTER
-    </div>
+    <Form
+      label='REGISTER'
+      inputs={inputs}
+      className='register'
+      type='text'
+      name='register'
+    />
   )
 }
 // is this right way to render same component with diff search params?
