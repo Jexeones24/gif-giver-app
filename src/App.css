@@ -1,23 +1,45 @@
 body {
   background-color: black;
+  font-family: 'Passion One', cursive ;font-size: 22px;
 }
 
 .App {
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
   background-color: black;
 }
 
+header {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
 .gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
   column-count: 3;
+  -webkit-column-width: 320px;
+  -moz-column-width: 320px;
+  column-width: 320px;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
   column-gap: 1.5em;
+  -moz-column-fill: auto;
+  column-fill: auto;
+
   @media (min-width: 40em) {
   margin: .5em 0 .5em -.5em;
   }
 }
 
 .search-bar {
+  width: 100%;
+  margin: 0 auto;
   background-color: black;
-  margin: 30px;
   padding-bottom: 15px;
 }
 
@@ -27,6 +49,7 @@ input {
   padding-left: 15px;
   font-size: 16px;
   border-radius: 3px;
+  width: 400px;
 }
 
 .img {
@@ -41,6 +64,8 @@ input {
   width: 100%;
   align-items: center;
   justify-content: center;
+  clear: both;
+  overflow: hidden;
 
   @media (min-width: 40em) {
     flex: 0;
@@ -63,6 +88,11 @@ input {
   visibility: visible;
   opacity: 1;
 }
+
+/*img.resize {
+  width:100%;
+  height: auto;
+}*/
 
 .add {
   position: relative;

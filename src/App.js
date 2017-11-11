@@ -24,6 +24,10 @@ class App extends Component {
   render () {
     return (
       <div className='App'>
+        <header>
+          <h1>GIF GIVER</h1>
+          <p>the gif that keeps on giving...</p>
+        </header>
         <Layout
           filterGifs={this.filterGifs}
           images={this.state.images}
