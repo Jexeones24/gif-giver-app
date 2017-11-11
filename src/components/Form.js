@@ -9,13 +9,14 @@ export default class Form extends Component {
           <form>
             {this.props.inputs.map((field, idx) =>
               <Input
+                key={idx}
                 type={this.props.type}
                 name={this.props.name}
                 value=''
                 placeholder={field}
               />
             )}
-            <button>SUBMIT</button>
+            <button className='btn-submit'>SUBMIT</button>
           </form>
         </div>
       </div>
@@ -27,6 +28,7 @@ const Input = (props) => {
   return (
     <div>
       <input
+        key={props.key}
         type={props.type}
         name={props.name}
         value={props.value}

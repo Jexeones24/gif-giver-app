@@ -35,9 +35,12 @@ a {
   padding: 10px;
   font-size: 15px;
 }
-
 a:hover {
   color: white;
+}
+
+a:active {
+  color: green;
 }
 
 header {
@@ -89,6 +92,19 @@ input {
   border-radius: 3px;
   width: 100%;
   box-sizing : border-box;
+  border: 2px solid transparent;
+  border-image: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  border-image-slice: 1;
+}
+
+.btn-submit {
+  color: #FF1493;
+  font-size: 14px;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  border-radius: 2px;
+  border-image-slice: 1;
 }
 
 .img {

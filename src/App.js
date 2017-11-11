@@ -3,7 +3,7 @@ import { fetchGifs } from './lib/gifService'
 import Main from './components/Main'
 import Form from './components/Form'
 import './App.css'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 
 class App extends Component {
   state = {
@@ -57,13 +57,16 @@ const NavBar = (props) => {
       <span className='title'>{props.title}</span>
       <span className='subtitle'>{props.subtitle}</span>
       <span className='nav-links'>
-        {props.links.map((link, idx) => <Link to='#' key={idx}>{link}</Link>)}
+        <NavLink exact activeClassName='active' to='/'>HOME</NavLink>
+        <NavLink exact activeClassName='active' to='/login'>LOGIN</NavLink>
+        <NavLink exact activeClassName='active' to='/register'>REGISTER</NavLink>
+        <NavLink exact activeClassName='active' to='/profile/:username'>PROFILE</NavLink>
       </span>
     </header>
   )
 }
 
-// need to pass: inputs (numberofFields), className, type, name, placeholder, onChange, onSubmit
+// need to pass onChange, onSubmit
 const Login = (props) => {
   const inputs = ['username', 'password', 'password confirmation']
   return (
