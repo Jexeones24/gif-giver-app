@@ -77,6 +77,12 @@ header {
   background-color: black;
   color: white;
   overflow: auto;
+  padding-top: 100px;
+}
+
+.form-label {
+  margin-bottom: 30px;
+  font-size: 30px;
 }
 
 .search-bar {
